@@ -1,3 +1,6 @@
+#ifndef __SCREEN_H
+#define __SCREEN_H
+
 #include <SFML/Graphics.hpp>
 #include <vector>
 
@@ -19,3 +22,5 @@ class Screen : public RenderWindow {
 		bool mousemove, drag;
 		float zoom;
 };
+
+#endif

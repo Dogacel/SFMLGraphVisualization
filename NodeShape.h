@@ -1,12 +1,14 @@
-#include <SFML/Graphics.hpp>
+#ifndef __NODE_SHAPE_H
+#define __NODE_SHAPE_H
 
-struct GraphNode {
-	std::string label;
-	int			weight;
-};
+#include <SFML/Graphics.hpp>
 
 class NodeShape : public sf::Sprite {
 	public:
+		struct GraphNode {
+			std::string label;
+			int			weight;
+		};
 		NodeShape(GraphNode *node, int size = 200, sf::Color color = sf::Color::White);
 		void Update();
 	private:
@@ -14,6 +16,7 @@ class NodeShape : public sf::Sprite {
 		sf::Font font;
 		sf::Text text;
 		sf::CircleShape circle;
-		sf::RenderTexture rtx;
-		
+		sf::RenderTexture rtx;		
 };
+
+#endif
